@@ -129,7 +129,12 @@ This project can be used for:
 
 Alexey Popov
 
-==============================================
+
+
+---
+
+
+
 # Graphic Calculator / Графический калькулятор (RU)
 
 ## Информация о проекте
