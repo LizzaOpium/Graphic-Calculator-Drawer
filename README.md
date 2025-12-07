@@ -1,6 +1,6 @@
 """
 Project: Ladder Geometry Visualizer
-Author: (your name)
+Author: Alexey Popov
 Description:
     This program visualizes a 3D-ish projection of the structure made of 
     four 1.8-meter wooden beams standing on the ground 0.2 m apart, with 
