@@ -70,17 +70,6 @@ The result is a clear geometric model that resembles a ladder or scaffolding str
 
 ---
 
-## Running the Program from Python
-
-If you want to run the source code directly:
-
-```bash
-pip install matplotlib numpy
-python GRAPH.py
-```
-
----
-
 ## Executable Version (.exe)
 
 The compiled Windows executable is named:
@@ -96,21 +85,6 @@ Graphic Calculator
 ```
 
 and published in this GitHub repository.
-
-The executable version does **not require Python to be installed**.
-
----
-
-## How to Build the EXE Yourself
-
-To build the executable manually:
-
-```bash
-pip install pyinstaller
-pyinstaller --noconsole --onefile GRAPH.py
-```
-
-The final `.exe` file will appear in the `dist` folder.
 
 ---
 
@@ -207,17 +181,6 @@ Alexey Popov
 
 ---
 
-## Запуск из Python
-
-Для запуска исходного кода:
-
-```bash
-pip install matplotlib numpy
-python GRAPH.py
-```
-
----
-
 ## Готовая версия (.exe)
 
 Скомпилированный исполняемый файл называется:
@@ -235,19 +198,6 @@ Graphic Calculator
 и опубликован в этом GitHub-репозитории.
 
 Для запуска `.exe` версия **не требует установленного Python**.
-
----
-
-## Сборка EXE вручную
-
-Для самостоятельной сборки:
-
-```bash
-pip install pyinstaller
-pyinstaller --noconsole --onefile GRAPH.py
-```
-
-Готовый файл появится в папке `dist`.
 
 ---
 
