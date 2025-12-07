@@ -1,0 +1,291 @@
+# Graphic Calculator
+
+# Console Input Format (Most Important Section)
+
+The program works in **interactive mode**: the user enters expressions one by one in the console. Below are **all supported input formats**.
+
+---
+
+## 1. Standard Functions: y = f(x)
+
+You must enter **only the right-hand side** of the function.
+Do **NOT** type `y =`.
+
+### Valid examples:
+
+```
+x
+x**2
+x**3 - 2*x
+sin(x)
+cos(x)
+exp(x)
+sqrt(x)
+sin(x) + x**2
+```
+
+### You may use:
+
+**Arithmetic operations:**
+`+`, `-`, `*`, `/`, `**`
+
+**Functions:**
+`sin`, `cos`, `tan`, `arcsin`, `arccos`, `arctan`,
+`sinh`, `cosh`, `tanh`,
+`exp`, `log`, `log10`, `sqrt`, `abs`
+
+**Constants:**
+`pi`, `e`
+
+---
+
+## 2. Using the Parameter `p`
+
+You can include the parameter `p` in **any formula**.
+
+### Examples:
+
+```
+x + p
+p*x
+sin(x) + p**2
+sqrt(p) + x
+p**2
+```
+
+If the entered expression contains `p`, the program will additionally ask:
+
+```
+Minimum p:
+Maximum p:
+Number of graphs on the same axes:
+```
+
+Then multiple graphs will be plotted for different values of `p`.
+
+### IMPORTANT:
+
+If the expression does **not depend on `x`** (for example: `p**2`, `5`, `3 + p`),
+the program will automatically plot a **horizontal line**.
+
+---
+
+## 3. Straight Lines
+
+### Vertical line:
+
+```
+x = 3
+x = -2
+```
+
+### Horizontal line:
+
+```
+y = 4
+y = -1
+```
+
+You can also use the parameter `p`:
+
+```
+x = p
+y = p**2
+```
+
+---
+
+## 4. Circles
+
+Only the **strict format** is supported:
+
+```
+(x - a)**2 + (y - b)**2 = R
+```
+
+### Examples:
+
+```
+(x-1)**2 + (y-2)**2 = 9
+(x+2)**2 + (y-3)**2 = 16
+x**2 + y**2 = 25
+```
+
+Where:
+
+* `a`, `b` — center coordinates
+* `R` — radius squared
+
+You can also use `p`:
+
+```
+(x - p)**2 + y**2 = 4
+```
+
+---
+
+## 5. Squares
+
+Squares are defined using absolute values:
+
+```
+abs(x - a) <= d and abs(y - b) <= d
+```
+
+### Examples:
+
+```
+abs(x) <= 2 and abs(y) <= 2
+abs(x-1) <= 3 and abs(y+2) <= 3
+```
+
+Where:
+
+* `(a, b)` — square center
+* `d` — half of the side length
+
+---
+
+## 6. Adding a Second Graph
+
+After the first graph is built, the program asks:
+
+```
+Add a second graph to the same axes? (yes/no):
+```
+
+If you answer:
+
+* `yes` / `y` → input for the second graph appears
+* `no` → the program immediately displays the result
+
+---
+
+## Project Information
+
+**Project:** Ladder Geometry Visualizer / Graphic Calculator
+**Author:** Alexey Popov
+
+This application visualizes a vertical ladder-like structure made of wooden beams and horizontal platforms using coordinate-based geometry. The project is implemented in Python and distributed as a standalone Windows executable (.exe).
+
+The program is designed for educational purposes and demonstrates how geometric objects can be constructed and visualized using numerical methods.
+
+---
+
+## Project Description
+
+The program builds a 2D geometric projection of the following structure:
+
+* 4 vertical wooden beams
+* Each beam has a height of **1.8 meters**
+* The distance between neighboring beams is **0.2 meters**
+* 6 horizontal platforms
+* Platforms are placed every **0.2 meters** in height
+* All platforms connect all four beams
+
+The result is a clear geometric model that resembles a ladder or scaffolding structure.
+
+---
+
+## Purpose of the Project
+
+* Visual demonstration of geometry using coordinates
+* Demonstration of numerical model construction
+* Practice with plotting and scaling
+* Visualization of real-world structures in a mathematical form
+* Easy conversion into an executable (.exe) file
+
+---
+
+## Technologies Used
+
+* **Python 3** — main programming language
+* **matplotlib.pyplot** — used for drawing the figure
+* **numpy** — used for numerical arrays and clean range generation
+
+---
+
+## How the Structure is Built
+
+### Vertical Beams
+
+* Height: 1.8 meters
+* X coordinates: `0`, `0.2`, `0.4`, `0.6`
+* Each beam is drawn as a vertical line segment
+
+### Horizontal Platforms
+
+* First platform at height `0.2 m`
+* Step size: `0.2 m`
+* Total: 6 platforms
+* Each platform connects all beams from `x = 0` to `x = 0.6`
+
+---
+
+## Axis Settings and Visualization
+
+* Equal scaling on both axes
+* Grid enabled
+* Correct proportional geometry
+* Clear axis labels and title
+
+---
+
+## Running the Program from Python
+
+If you want to run the source code directly:
+
+```bash
+pip install matplotlib numpy
+python GRAPH.py
+```
+
+---
+
+## Executable Version (.exe)
+
+The compiled Windows executable is named:
+
+```
+grafik.exe
+```
+
+It is located inside the archive:
+
+```
+Graphic Calculator
+```
+
+and published in this GitHub repository.
+
+The executable version does **not require Python to be installed**.
+
+---
+
+## How to Build the EXE Yourself
+
+To build the executable manually:
+
+```bash
+pip install pyinstaller
+pyinstaller --noconsole --onefile GRAPH.py
+```
+
+The final `.exe` file will appear in the `dist` folder.
+
+---
+
+## Educational Value
+
+This project can be used for:
+
+* School geometry projects
+* Demonstration of coordinate systems
+* Learning numerical modeling
+* Introduction to scientific visualization
+
+---
+
+## Author
+
+Alexey Popov
